@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Testimonials | AquaFix Plumbing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066cc',
+                        secondary: '#004080',
+                        accent: '#ff6600',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1600585152220-903592e378b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .avatar {
+            background-image: url('https://randomuser.me/api/portraits/');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Top Bar -->
+    <div class="bg-primary text-white py-2 px-4">
+        <div class="container mx-auto flex justify-between items-center text-sm">
+            <div class="flex space-x-4">
+                <span><i class="fas fa-phone-alt mr-1"></i> 0161 123 4567</span>
+                <span><i class="fas fa-envelope mr-1"></i> info@aquafixplumbing.co.uk</span>
+            </div>
+            <div class="flex space-x-4">
+                <span>24/7 Emergency Service</span>
+                <div class="flex space-x-2">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/50x50" alt="AquaFix Plumbing Logo" class="h-12 mr-3">
+                <span class="text-2xl font-bold text-primary">AquaFix<span class="text-accent">Plumbing</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-medium hover:text-primary">Home</a>
+                <a href="services.html" class="font-medium hover:text-primary">Services</a>
+                <a href="about.html" class="font-medium hover:text-primary">About Us</a>
+                <a href="testimonials.html" class="font-medium text-primary">Testimonials</a>
+                <a href="contact.html" class="font-medium hover:text-primary">Contact</a>
+            </div>
+            <button class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-24 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">What Our Customers Say</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Hear from homeowners and businesses across Manchester who've experienced our plumbing services firsthand</p>
+            <a href="#testimonials" class="inline-block bg-accent hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                Read Testimonials
+            </a>
+        </div>
+    </section>
+
+    <!-- Testimonials Intro -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">Trusted by Manchester Residents & Businesses</h2>
+                <p class="text-gray-600 mb-8">With over 2,500 satisfied customers across Greater Manchester, we take pride in delivering exceptional plumbing services that stand the test of time. Our customers' experiences speak volumes about our commitment to quality workmanship and outstanding service.</p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="bg-gray-50 px-6 py-3 rounded-full flex items-center">
+                        <i class="fas fa-star text-yellow-400 mr-2"></i>
+                        <span class="font-medium">4.9/5 Average Rating</span>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-3 rounded-full flex items-center">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span class="font-medium">98% Customer Satisfaction</span>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-3 rounded-full flex items-center">
+                        <i class="fas fa-users text-primary mr-2"></i>
+                        <span class="font-medium">500+ Repeat Customers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Testimonials -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Recent Customer Experiences</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Here's what some of our recent customers have to say about their experience with AquaFix Plumbing</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-cover bg-center mr-4" style="background-image: url('https://randomuser.me/api/portraits/women/44.jpg')"></div>
+                        <div>
+                            <h4 class="font-bold text-lg">Emily Rutherford</h4>
+                            <p class="text-gray-500 text-sm">Altrincham • Bathroom Installation</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"The AquaFix team transformed our outdated bathroom into a modern spa-like retreat. From the initial design consultation to the final installation, their attention to detail was impeccable. They completed the project on time and within budget, and we couldn't be happier with the results."</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>15 March 2023</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-cover bg-center mr-4" style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg')"></div>
+                        <div>
+                            <h4 class="font-bold text-lg">David Chen</h4>
+                            <p class="text-gray-500 text-sm">Manchester City Centre • Emergency Repair</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"When a pipe burst in our apartment at 2am, AquaFix had an engineer at our door within 35 minutes. They fixed the issue quickly and professionally, preventing thousands of pounds worth of damage. Their emergency response is truly outstanding - I can't recommend them highly enough."</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>2 February 2023</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-cover bg-center mr-4" style="background-image: url('https://randomuser.me/api/portraits/women/68.jpg')"></div>
+                        <div>
+                            <h4 class="font-bold text-lg">Sarah Wilkinson</h4>
+                            <p class="text-gray-500 text-sm">Didsbury • Boiler Replacement</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"After getting three quotes for our new boiler installation, AquaFix offered the best combination of price and service. Their engineer arrived exactly on time, was incredibly knowledgeable, and left the area spotless. The new boiler is running perfectly and our heating bills have dropped significantly."</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>10 January 2023</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-cover bg-center mr-4" style="background-image: url('https://randomuser.me/api/portraits/men/75.jpg')"></div>
+                        <div>
+                            <h4 class="font-bold text-lg">James O'Connor</h4>
+                            <p class="text-gray-500 text-sm">Salford • Commercial Plumbing</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"As a restaurant owner, plumbing issues can be disastrous for business. AquaFix has been maintaining our premises for two years now and their preventative maintenance program has saved us countless headaches. Their team is professional, reliable, and always available when we need them."</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>5 December 2022</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-cover bg-center mr-4" style="background-image: url('https://randomuser.me/api/portraits/women/33.jpg')"></div>
+                        <div>
+                            <h4 class="font-bold text-lg">Aisha Khan</h4>
+                            <p class="text-gray-500 text-sm">Chorlton • Complete House Plumbing</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"We hired AquaFix to replumb our entire Victorian terrace during renovation. Their team worked seamlessly with our builders, solved numerous unexpected challenges with creative solutions, and delivered exceptional quality work. A year later, we've had zero issues - just perfect performance from all our plumbing."</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>22 November 2022</span>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card p-8 rounded-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-cover bg-center mr-4" style="background-image: url('https://randomuser.me/api/portraits/men/54.jpg')"></div>
+                        <div>
+                            <h4 class="font-bold text-lg">Michael Brown</h4>
+                            <p class="text-gray-500 text-sm">Prestwich • Drainage Solutions</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"After struggling with recurring drain blockages for months, AquaFix conducted a CCTV survey that identified root intrusion from nearby trees. Their permanent solution has worked perfectly for over a year now. What impressed me most was their thorough explanation of the problem and solution - no pressure, just honest advice."</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>14 October 2022</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Video Testimonials</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear directly from our satisfied customers in their own words</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Video 1 -->
+                <div class="bg-gray-200 rounded-lg overflow-hidden relative pt-[56.25%]">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i class="fas fa-play-circle text-5xl text-primary opacity-80"></i>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                        <h3 class="text-white font-bold">The Johnson Family</h3>
+                        <p class="text-gray-300 text-sm">Bathroom Renovation in Stockport</p>
+                    </div>
+                </div>
+                
+                <!-- Video 2 -->
+                <div class="bg-gray-200 rounded-lg overflow-hidden relative pt-[56.25%]">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i class="fas fa-play-circle text-5xl text-primary opacity-80"></i>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                        <h3 class="text-white font-bold">Urban Eats Café</h3>
+                        <p class="text-gray-300 text-sm">Commercial Kitchen Plumbing in Manchester</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Platforms -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Our Reviews Across Platforms</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We're proud of our reputation across independent review platforms</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- Trustpilot -->
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="flex justify-center text-yellow-400 mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <img src="https://via.placeholder.com/150x30?text=Trustpilot" alt="Trustpilot" class="h-8 mx-auto mb-4">
+                    <div class="text-2xl font-bold mb-2">4.9/5</div>
+                    <p class="text-gray-600 text-sm">Based on 287 reviews</p>
+                    <a href="#" class="inline-block mt-4 text-primary font-medium hover:underline">Read Reviews</a>
+                </div>
+                
+                <!-- Checkatrade -->
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="flex justify-center text-yellow-400 mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <img src="https://via.placeholder.com/150x30?text=Checkatrade" alt="Checkatrade" class="h-8 mx-auto mb-4">
+                    <div class="text-2xl font-bold mb-2">9.8/10</div>
+                    <p class="text-gray-600 text-sm">Based on 194 reviews</p>
+                    <a href="#" class="inline-block mt-4 text-primary font-medium hover:underline">Read Reviews</a>
+                </div>
+                
+                <!-- Google -->
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                    <div class="flex justify-center text-yellow-400 mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <img src="https://via.placeholder.com/150x30?text=Google" alt="Google" class="h-8 mx-auto mb-4">
+                    <div class="text-2xl font-bold mb-2">4.8/5</div>
+                    <p class="text-gray-600 text-sm">Based on 156 reviews</p>
+                    <a href="#" class="inline-block mt-4 text-primary font-medium hover:underline">Read Reviews</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-accent text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Experience Our Service?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join our growing list of satisfied customers across Manchester</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:01611234567" class="bg-white hover:bg-gray-100 text-accent font-bold py-3 px-6 rounded-lg transition duration-300">
+                    <i class="fas fa-phone-alt mr-2"></i> Call Now: 0161 123 4567
+                </a>
+                <a href="contact.html" class="bg-secondary hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    <i class="fas fa-envelope mr-2"></i> Get a Free Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">AquaFix Plumbing</h3>
+                    <p class="mb-4">Providing reliable plumbing services across Greater Manchester for over 12 years.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-accent"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-accent"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-accent"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent transition">Home</a></li>
+                        <li><a href="services.html" class="hover:text-accent transition">Services</a></li>
+                        <li><a href="about.html" class="hover:text-accent transition">About Us</a></li>
+                        <li><a href="testimonials.html" class="hover:text-accent transition">Testimonials</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent transition">Emergency Repairs</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Bathroom Installations</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Boiler Services</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Drainage Solutions</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Central Heating</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent"></i>
+                            <span>12 Plumbing Street, Manchester, M1 2AB</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-accent"></i>
+                            <span>0161 123 4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-accent"></i>
+                            <span>info@aquafixplumbing.co.uk</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 AquaFix Plumbing. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Call Button (Mobile) -->
+    <div class="fixed bottom-6 right-6 md:hidden">
+        <a href="tel:01611234567" class="bg-accent hover:bg-orange-700 text-white rounded-full p-4 shadow-lg flex items-center justify-center">
+            <i class="fas fa-phone-alt text-xl"></i>
+        </a>
+    </div>
+
+    <script>
+        // Simple script for mobile menu toggle (would be expanded in a real implementation)
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            // This would toggle a mobile menu in a real implementation
+            alert('Mobile menu would open here in a full implementation');
+        });
+    </script>
+</body>
+</html>
