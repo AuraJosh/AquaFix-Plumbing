@@ -559,5 +559,18 @@
         }, 3000);
       })();
     </script>
+    <script>
+      setTimeout(() => {
+        const widget = document.querySelector('#aura-chatbot-container');
+        if (!widget) {
+          console.error("Widget element not found in DOM");
+        } else {
+          console.log("Widget found. Visibility:", 
+            window.getComputedStyle(widget).visibility);
+          console.log("Shadow children:", 
+            widget.shadowRoot?.children?.length || 0);
+        }
+      }, 2000);
+    </script>
 </body>
 </html>
