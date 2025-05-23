@@ -543,6 +543,21 @@
             alert('Mobile menu would open here in a full implementation');
         });
     </script>
-    <script src="https://aurajosh.github.io/Testing/chatbot.js" async></script>
+    <script>
+      (function() {
+        const script = document.createElement('script');
+        script.src = 'https://aurajosh.github.io/Testing/chatbot.js?v=' + Date.now();
+        script.async = true;
+        document.head.appendChild(script);
+        
+        // Fallback check
+        setTimeout(() => {
+          if (!document.querySelector('#aura-chatbot-container')) {
+            console.warn('Chatbot failed to load - injecting fallback');
+            // Add emergency injection code here if needed
+          }
+        }, 3000);
+      })();
+    </script>
 </body>
 </html>
